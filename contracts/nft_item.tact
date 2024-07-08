@@ -20,9 +20,13 @@ contract NftItem with Deployable, OwnableTransferable {
         self.individualContent = individualContent;
     }
 
-    receive(msg: Transfer){
-        self.requireOwner();
-        self.owner = msg.newOwner;
+    receive("deploy"){
+        
     }
+
+    // receive(msg: Transfer){
+    //     self.requireOwner();
+    //     self.owner = msg.newOwner;
+    // }
 
 }
